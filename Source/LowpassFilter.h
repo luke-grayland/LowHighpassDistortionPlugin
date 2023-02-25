@@ -12,14 +12,14 @@
 #include <JuceHeader.h>
 
 class LowpassFilter {
-    
 public:
     void setCutoffFrequency(float cutoffFrequency);
     void setSamplingRate(float samplingrate);
+    
     void processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&);
     
 private:
-    float cuttoffFrequency;
+    float cutoffFrequency;
     float samplingRate;
     std::vector<float> dnBuffer;
 };

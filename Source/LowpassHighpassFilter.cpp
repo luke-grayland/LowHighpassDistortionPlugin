@@ -40,6 +40,7 @@ void LowpassHighpassFilter::processBlock(juce::AudioBuffer<float>& buffer,
 
       const auto allpassFilteredSample = a1 * inputSample +
                                             dnBuffer[channel];
+        
       dnBuffer[channel] = inputSample - a1 * allpassFilteredSample;
 
       const auto filterOutput =
